@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+  /* Primary */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  /* Accent */
+  --Blue: hsl(248, 32%, 49%);
+  /* Neutral */
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+  --Poppins: 'Poppins', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-size: 16px;
+  font-family: var(--Poppins);
+  text-rendering: optimizeLegibility;
+  color: white;
+  font-size: 400;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+.container {
+  background: var(--Red) url('images/bg-intro-desktop.png') no-repeat
+    center/cover;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigbox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80vw;
+}
+.des {
+  width: 50%;
+  margin-right: 5%;
+}
+.signup {
+  width: 45%;
+}
+.des h1 {
+  font-size: 3em;
+  line-height: 1.2;
+}
+.des p {
+  margin-top: 10px;
+  font-size: 0.95em;
+}
+.signup .trialbtn {
+  font-family: inherit;
+  color: inherit;
+  width: 100%;
+  background-color: var(--Blue);
+  padding: 3% 0%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 0;
+  outline: 0;
+  font-weight: 300;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+}
+.signup .trialbtn:hover {
+  transform: rotateX(360deg);
+  -webkit-transform: rotateX(360deg);
+  -moz-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+  -o-transform: rotateX(360deg);
+  color: var(--Blue);
+  background-color: white;
+}
+.signup .trialbtn span {
+  font-weight: 500;
+}
+.signup .signupfr {
+  margin-top: 20px;
+  display: block;
+  background-color: white;
+  padding: 3% 8%;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding-bottom: 7%;
+}
+.signupfr input {
+  display: block;
+  margin-top: 5%;
+  padding: 3.5% 8%;
+  width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: 1px solid var(--Blue);
+}
+.signupfr .subbtn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 3% 0%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border: 1px solid transparent;
+  outline: 0;
+  background-color: var(--Green);
+  font-family: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9em;
+  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+}
+.signupfr .subbtn:hover {
+  color: var(--Green);
+  border: 1px solid var(--DarkBlue);
+  background-color: white;
+}
+.signupfr p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.7em;
+  color: rgb(192, 192, 192);
+}
+.signupfr p a {
+  text-decoration: none;
+  color: var(--Red);
+  padding-left: 2px;
+}
+.formaterror {
+  text-align: right;
+  color: var(--Red);
+  font-size: 0.8em;
+}
+.form-control {
+  position: relative;
+}
+.errorimg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 4%;
+  width: 20px;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 0.9em;
+  }
+  .des {
+    width: 40%;
+  }
+  .signup {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 0.8em;
+  }
+  .bigbox {
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .des {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .signup {
+    width: 100%;
+  }
+  .container {
+    padding: 5% 0%;
+  }
+  .signupfr .subbtn {
+    font-size: 1.2em;
+  }
+}
