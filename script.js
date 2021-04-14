@@ -27,7 +27,7 @@ document.querySelector('form').addEventListener('submit',(e)=>{
         const error = document.createElement('div');
         error.classList.add('formaterror');
         error.innerHTML = errormsg;
-        document.forms[0].querySelectorAll('.form-control')[index].insertAdjacentElement('afterbegin',errorimg);
+        document.forms[0].querySelectorAll('.form-control')[index].insertAdjacentElement('afterbegin',errorimg.cloneNode());
         document.forms[0].querySelectorAll('.form-control')[index].insertAdjacentElement('afterend',error);
         
         }else if(el.classList[0] === 'email'){
